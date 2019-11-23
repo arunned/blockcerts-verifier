@@ -1,0 +1,30 @@
+<html>
+<head>
+
+</head>
+<body>
+  <script src="file:///Users/arunnedun/source/cert-verifier-js/dist/verifier-iife.js"></script>
+
+
+
+
+
+  <script>
+
+    let request = new XMLHttpRequest();
+    request.open('GET', 'https://verify.proofplum.com/algo2.json');
+    request.responseType = 'json';
+    request.onload = async () => {
+      const certificate = new Verifier.Certificate(request.response);
+      // Verify
+      const certificateVerification = await certificate.verify(({code, label, status, errorMessage}) => {
+    console.log('Sub step update:', code, label, status);
+			});
+		console.log(`Verification was a ${certificateVerification.status}:`, certificateVerification.message);
+
+
+    };
+    request.send();
+  </script>
+</body>
+</html>

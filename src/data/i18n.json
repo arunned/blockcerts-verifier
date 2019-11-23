@@ -45,7 +45,7 @@
       },
       "blockchain": {
         "label": "Verified",
-        "description": "This is a valid ${chain} certificate.",
+        "description": "Rest Easy. This is 100% valid ${chain} blockchain certificate.",
         "linkText": "View transaction link"
       }
     },

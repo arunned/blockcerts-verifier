@@ -3,7 +3,8 @@ const TRANSACTION_APIS = {
   Blockcypher: 'blockcypher',
   Blockexplorer: 'blockexplorer',
   Blockstream: 'blockstream',
-  Etherscan: 'etherscan'
+  Etherscan: 'etherscan',
+  Algoexplorer: 'algoexplorer'
 };
 
 const TRANSACTION_ID_PLACEHOLDER = '{transaction_id}';
@@ -29,6 +30,13 @@ const TRANSACTIONS_APIS_URLS = {
   [TRANSACTION_APIS.Etherscan]: {
     main: `https://api.etherscan.io/api?module=proxy`,
     ropsten: `https://api-ropsten.etherscan.io/api?module=proxy`
+  },
+  // Add &apikey={key} to EtherScan URL's if getting rate limited
+  [TRANSACTION_APIS.Algoexplorer]: {
+    mainnet: `https://mainnet-algorand.api.purestake.io/ps1/v1/`,
+    testnet: `https://testnet-algorand.api.purestake.io/ps1/v1/`,
+    betanet: `https://betanet-algorand.api.purestake.io/ps1/v1/`
+
   }
 };
 

@@ -13,11 +13,14 @@ const CheckForUnmappedFields = true;
 
 const PublicKey = 'ecdsa-koblitz-pubkey:1';
 
+const PureStakeAPIKey = 'XVfgUp0Izfa4ZXa8e6rXM11Ajro2oDGh4ngHfCGP';
+
 export default {
   SecurityContextUrl,
   MininumConfirmations,
   MinimumBlockchainExplorers,
   Race,
   CheckForUnmappedFields,
+  PureStakeAPIKey,
   PublicKey
 };

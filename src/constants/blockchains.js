@@ -58,5 +58,35 @@ export const BLOCKCHAINS = {
       full: `https://testnet.blockchain.info/tx/${TRANSACTION_TEMPLATE_ID_PLACEHOLDER}`,
       raw: `https://testnet.blockchain.info/rawtx/${TRANSACTION_TEMPLATE_ID_PLACEHOLDER}`
     }
+  },
+  algomain: {
+    code: 'algomain',
+    name: 'Algorand',
+
+    signatureValue: 'algorandMainnet',
+    transactionTemplates: {
+      full: `https://algoexplorer.io/tx/${TRANSACTION_TEMPLATE_ID_PLACEHOLDER}`,
+      raw: `https://algoexplorer.io/tx/${TRANSACTION_TEMPLATE_ID_PLACEHOLDER}`
+    }
+  },
+  algotest: {
+    code: 'algotest',
+    name: 'Algorand',
+
+    signatureValue: 'algorandTestnet',
+    transactionTemplates: {
+      full: `https://testnet.algoexplorer.io/tx/${TRANSACTION_TEMPLATE_ID_PLACEHOLDER}`,
+      raw: `https://testnet.algoexplorer.io/tx/${TRANSACTION_TEMPLATE_ID_PLACEHOLDER}`
+    }
+  },
+  algobeta: {
+    code: 'algobeta',
+    name: 'Algorand',
+
+    signatureValue: 'algorandBetanet',
+    transactionTemplates: {
+      full: `https://betanet.algoexplorer.io/tx/${TRANSACTION_TEMPLATE_ID_PLACEHOLDER}`,
+      raw: `https://betanet.algoexplorer.io/tx/${TRANSACTION_TEMPLATE_ID_PLACEHOLDER}`
+    }
   }
 };

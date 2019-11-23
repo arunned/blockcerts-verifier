@@ -1,6 +1,6 @@
 import { BLOCKCHAINS, CERTIFICATE_VERSIONS, CONFIG, SUB_STEPS } from '../../../constants';
 import { VerifierError } from '../../../models';
-import { BitcoinExplorers, BlockchainExplorersWithSpentOutputInfo, EthereumExplorers } from '../../../explorers';
+import { BitcoinExplorers, BlockchainExplorersWithSpentOutputInfo, EthereumExplorers, AlgorandExplorers } from '../../../explorers';
 import PromiseProperRace from '../../../helpers/promiseProperRace';
 import { getText } from '../../i18n/useCases';
 
@@ -17,6 +17,11 @@ export default function lookForTx (transactionId, chain, certificateVersion) {
     case BLOCKCHAINS.ethropst.code:
       BlockchainExplorers = EthereumExplorers;
       break;
+    case BLOCKCHAINS.algomain.code:
+    case BLOCKCHAINS.algotest.code:
+    case BLOCKCHAINS.algobeta.code:
+        BlockchainExplorers = AlgorandExplorers;
+        break;
     default:
       return Promise.reject(new VerifierError(SUB_STEPS.fetchRemoteHash, getText('errors', 'lookForTxInvalidChain')));
   }
